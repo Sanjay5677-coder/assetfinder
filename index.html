@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scraping Web App</title>
+</head>
+<style>
+    body{
+        background-color:black;
+        color:white;
+    }
+    form{
+        
+        height:300px;
+        width:250px;
+        background-color:black;
+        color:white;
+        margin-left:570px;
+        
+    }
+    form[input='text']{
+        color:blue;
+
+    }
+    form:[input='submit']{
+        border:1px solid white;
+        border-radius:5px;
+        cursor:pointer;
+    }
+    button{
+        background-color:black;
+        padding:5px;
+        border:1px solid red;
+        border-radius:5px;
+        color:white;
+        cursor:pointer;
+        margin:4px;
+    }
+    button:hover{
+        background-color:blue;
+        color:white;
+        padding:5px;
+        border:1px solid red;
+        border-radius:5px;
+        cursor:pointer;
+        margin:4px;
+
+    }
+    h1{
+        text-align:center;
+        justify-content:center;
+    }
+    p{
+        text-align:center;
+        justify-content:center;
+    }
+    h2{
+        text-align:center;
+        justify-content:center;
+    }
+</style>
+    
+<body>
+    
+    
+    <h1> Web Scraper App</h1>
+    <p>Enter Valid URL of Any Website</p>
+    <p>example : http://www.google.com</p>
+    <form action="{{ url_for('scrape') }}" method="post">
+        <label for="url">Enter URL Here:</label>
+        <input type="text" name="url" id="url">
+        <button type="submit">Submit</button>
+    </form><br>
+    
+    <h2>We are here to assist you<h2>
+    
+   
+
+</body>
+</html>    
